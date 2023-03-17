@@ -13,6 +13,21 @@ public class Isogram {
      * @return true if str is an isogram, false otherwise.
      */
     public boolean isIsogram(String str){
-        return false;
+        String[] mystr = str.split("");
+
+
+        Set<String> mystrA = new HashSet<String>();
+
+        for (int i = 0; i< mystr.length; i ++){
+            mystrA.add(mystr[i]);
+
+        }
+        if ( mystrA.size() == mystr.length){
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
 }

@@ -3,9 +3,9 @@
  * In order to make our programs even more impressive and interactive, we need to learn how to better leverage
  * boolean expressions. This will allow our programs to follow their own logic. For this example, you should look into
  * the different operators for basic boolean expressions.
- * 
+ *
  * More resources: https://www.freejavaguide.com/boolean_operators.htm
- * 
+ *
  * NOTE: All of these problems can be solved with one line with boolean operators.
  */
 public class Expressions {
@@ -14,7 +14,11 @@ public class Expressions {
      * @return if b is true, return true. if b is false, return false.
      */
     public boolean returnBoolean(boolean b){
-        return false;
+        if ( b == true){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /**
@@ -23,7 +27,11 @@ public class Expressions {
      * look into boolean operations to do this without using if/else statements.
      */
     public boolean returnNot(boolean b){
-        return false;
+        if ( b == true){
+            return false;
+        }else{
+            return true;
+        }
     }
 
     /**
@@ -33,7 +41,11 @@ public class Expressions {
      * look into boolean operations to do this without using if/else statements.
      */
     public boolean returnAnd(boolean b1, boolean b2){
-        return false;
+        if ( b1 == true & b2 == true){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /**
@@ -43,7 +55,11 @@ public class Expressions {
      * look into boolean operations to do this without using if/else statements.
      */
     public boolean returnOr(boolean b1, boolean b2){
-        return false;
+        if ( b1 == false & b2 == false){
+            return false;
+        }else{
+            return true;
+        }
     }
 
 

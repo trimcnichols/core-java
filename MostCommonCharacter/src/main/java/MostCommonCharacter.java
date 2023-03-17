@@ -1,3 +1,6 @@
+import java.util.*;
+import java.util.Map.Entry;
+
 
 public class MostCommonCharacter {
     /**
@@ -8,6 +11,38 @@ public class MostCommonCharacter {
      * @return the most common character within str.
      */
     public char recurringChar(String str) {
-        return ' ';
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        // String[] arrOfStr = str.split("+");
+        // String mystr = arrOfStr.toString();
+        char[] mychar = str.toCharArray();
+        Character maxappearchar =' ';
+
+        for (int i = 0; i < mychar.length; i ++){
+            if ( map.containsKey(mychar[i]))
+            {
+                map.put (mychar[i], map.get(mychar[i]) + 1 );
+
+            }
+            else
+            {
+                map.put (mychar[i], 1);
+            }
+        }
+
+        // Got the number of maximum occuarance
+        Integer maxNum = Collections.max(map.values());
+
+        // Iterate to search the character result.
+
+        for (Entry<Character, Integer> entry : map.entrySet()) {
+
+            if( entry.getValue()== maxNum){
+                maxappearchar=entry.getKey();
+            }
+        }
+
+
+        return maxappearchar;
+
     }
 }
